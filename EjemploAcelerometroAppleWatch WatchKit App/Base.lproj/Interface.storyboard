@@ -1,15 +1,47 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch42" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="EjemploAcelerometroAppleWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="136" alignment="left" text="ACELEROMETRO" textAlignment="right" id="vDp-ch-3kA"/>
+                        <group width="1" alignment="right" verticalAlignment="bottom" id="jTo-aO-izd">
+                            <items>
+                                <label alignment="left" verticalAlignment="center" text="X" id="Ujp-iN-Cx5"/>
+                                <label alignment="right" verticalAlignment="center" text="0" id="2L3-vB-EVg"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" verticalAlignment="bottom" id="bU5-3L-WC3">
+                            <items>
+                                <label alignment="left" verticalAlignment="center" text="Y" id="CES-U0-K9O"/>
+                                <label alignment="right" verticalAlignment="center" text="0" id="TA8-cb-vBd"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" verticalAlignment="bottom" id="SCV-1Y-b98">
+                            <items>
+                                <label alignment="left" verticalAlignment="center" text="Z" id="TVf-0D-NJU"/>
+                                <label alignment="right" verticalAlignment="center" text="0" id="nvM-fE-C7J"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="labelX" destination="2L3-vB-EVg" id="x4w-tX-ZyL"/>
+                        <outlet property="labelY" destination="TA8-cb-vBd" id="NcY-Qh-PfB"/>
+                        <outlet property="labelZ" destination="nvM-fE-C7J" id="xvj-Q2-2Zy"/>
+                    </connections>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="34" y="30.948717948717952"/>
         </scene>
     </scenes>
 </document>

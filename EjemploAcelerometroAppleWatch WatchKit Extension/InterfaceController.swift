@@ -1,21 +1,18 @@
-//
-//  InterfaceController.swift
-//  EjemploAcelerometroAppleWatch WatchKit Extension
-//
-//  Created by Jesus on 29/6/18.
-//  Copyright © 2018 Jesus. All rights reserved.
-//
-
 import WatchKit
 import Foundation
-
+import CoreMotion
 
 class InterfaceController: WKInterfaceController {
+    
+    @IBOutlet var labelX: WKInterfaceLabel!
+    @IBOutlet var labelY: WKInterfaceLabel!
+    @IBOutlet var labelZ: WKInterfaceLabel!
+    
+    let motionManager = CMMotionManager()
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        // Configure interface objects here.
     }
     
     override func willActivate() {
